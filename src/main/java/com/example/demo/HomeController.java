@@ -11,16 +11,23 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class HomeController {
     @ModelAttribute("course")
     public String returnCourse(){
         return "Blizzard";
     }
+    //@RequestMapping("/")
+    //public String home(){
+    //    System.out.println("home method called...");
+    //    return "index.jsp";
+    //}
     @RequestMapping("/")
-    public String home(){
+    public ModelAndView home(ModelAndView mv){
         System.out.println("home method called...");
-        return "index.jsp";
+        mv.addObject("msg", "index");
+        mv.setViewName("index");
+        return mv;
     }
     @RequestMapping("add")
     //public String add(HttpServletRequest req, HttpSession session){
