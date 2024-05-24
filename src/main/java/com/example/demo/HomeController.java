@@ -19,7 +19,7 @@ public class HomeController {
     @RequestMapping("/")
     public String home(){
         System.out.println("home method called...");
-        return "index";
+        return "index.jsp";
     }
     @RequestMapping("add")
     //public String add(HttpServletRequest req, HttpSession session){
@@ -38,6 +38,6 @@ public class HomeController {
 
     @RequestMapping("addAlien")
     public String addAlien(@ModelAttribute("alien1") Alien alien) {
-        return "result";
+        return "result.jsp";
     }
 }
