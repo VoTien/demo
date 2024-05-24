@@ -26,7 +26,7 @@ public class HomeController {
     public ModelAndView home(ModelAndView mv){
         System.out.println("home method called...");
         mv.addObject("msg", "index");
-        mv.setViewName("index");
+        mv.setViewName("index.jsp");
         return mv;
     }
     @RequestMapping("add")
