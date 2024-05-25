@@ -19,26 +19,26 @@ public class HomeController {
         return "Blizzard";
     }
     @RequestMapping("/")
-    @ResponseBody
     public String home(){
-        String html = "<html>\n" +
-                "    <head>\n" +
-                "        <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n" +
-                "    </head>\n" +
-                "    </body>\n" +
-                "        <h2>Calculator</h2>\n" +
-                "\n" +
-                "         <form action=\"addAlien\">\n" +
-                "                <label for=\"aid\">Enter Id :</label>\n" +
-                "                <input type=\"text\" id=\"aid\" name=\"aid\"><br>\n" +
-                "                <label for=\"aname\">Enter Name :</label>\n" +
-                "                <input type=\"text\" id=\"aname\" name=\"aname\"><br>\n" +
-                "                <input type=\"submit\" value=\"Submit\">\n" +
-                "            </form>\n" +
-                "\n" +
-                "    </body>\n" +
-                "</html>";
-        return html;
+//        String html = "<html>\n" +
+//                "    <head>\n" +
+//                "        <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n" +
+//                "    </head>\n" +
+//                "    </body>\n" +
+//                "        <h2>Calculator</h2>\n" +
+//                "\n" +
+//                "         <form action=\"addAlien\">\n" +
+//                "                <label for=\"aid\">Enter Id :</label>\n" +
+//                "                <input type=\"text\" id=\"aid\" name=\"aid\"><br>\n" +
+//                "                <label for=\"aname\">Enter Name :</label>\n" +
+//                "                <input type=\"text\" id=\"aname\" name=\"aname\"><br>\n" +
+//                "                <input type=\"submit\" value=\"Submit\">\n" +
+//                "            </form>\n" +
+//                "\n" +
+//                "    </body>\n" +
+//                "</html>";
+        System.out.println("home method called...");
+        return "index";
     }
 
     @RequestMapping("add")
