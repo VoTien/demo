@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     </body>
-        <h1>Welcome to the ${course} World</h1>
-        <p> ${alien1} </p>
+        <h1 th:text="'Welcome to the ' + ${course} + ' World'"></h1>
+        <p th:text="${alien}"></p>
     </body>
 </html>
